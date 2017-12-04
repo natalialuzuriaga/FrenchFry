@@ -1,0 +1,684 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		572B6EDB1F93F4C4005AA131 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572B6EDA1F93F4C4005AA131 /* GameKit.framework */; };
+		57392F401F437F81006C5C2F /* coin3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 57392F3F1F437F81006C5C2F /* coin3.mp3 */; };
+		57392F421F438060006C5C2F /* waterdrop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 57392F411F438060006C5C2F /* waterdrop.mp3 */; };
+		57392F4A1F438497006C5C2F /* rub glass 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 57392F491F438497006C5C2F /* rub glass 1.mp3 */; };
+		57392F501F438C29006C5C2F /* Splat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 57392F4F1F438C29006C5C2F /* Splat.mp3 */; };
+		57392F521F438F5D006C5C2F /* TemporaryTutorial.sks in Resources */ = {isa = PBXBuildFile; fileRef = 57392F511F438F5D006C5C2F /* TemporaryTutorial.sks */; };
+		57392F541F448022006C5C2F /* Light.sks in Resources */ = {isa = PBXBuildFile; fileRef = 57392F531F448022006C5C2F /* Light.sks */; };
+		57392F561F45D59B006C5C2F /* AnimationActions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 57392F551F45D59B006C5C2F /* AnimationActions.sks */; };
+		576172961F4DF3FF00B88ED1 /* BossStageOne.sks in Resources */ = {isa = PBXBuildFile; fileRef = 576172951F4DF3FF00B88ED1 /* BossStageOne.sks */; };
+		576172981F4DF69200B88ED1 /* BossStageOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576172971F4DF69200B88ED1 /* BossStageOne.swift */; };
+		5761729A1F4E151C00B88ED1 /* Bomb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576172991F4E151C00B88ED1 /* Bomb.swift */; };
+		576172A01F50AF4E00B88ED1 /* SoundTrack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5761729F1F50AF4E00B88ED1 /* SoundTrack.mp3 */; };
+		57A061851F262D79004F8003 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A061841F262D79004F8003 /* AppDelegate.swift */; };
+		57A061871F262D79004F8003 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 57A061861F262D79004F8003 /* GameScene.sks */; };
+		57A0618B1F262D79004F8003 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A0618A1F262D79004F8003 /* GameScene.swift */; };
+		57A0618D1F262D79004F8003 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A0618C1F262D79004F8003 /* GameViewController.swift */; };
+		57A061901F262D79004F8003 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57A0618E1F262D79004F8003 /* Main.storyboard */; };
+		57A061921F262D79004F8003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57A061911F262D79004F8003 /* Assets.xcassets */; };
+		57A061951F262D79004F8003 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57A061931F262D79004F8003 /* LaunchScreen.storyboard */; };
+		57A061A01F262D7A004F8003 /* French_FryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A0619F1F262D7A004F8003 /* French_FryTests.swift */; };
+		57A061AB1F262D7A004F8003 /* French_FryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A061AA1F262D7A004F8003 /* French_FryUITests.swift */; };
+		57A87F7D1F473B1600FC0507 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57A87F7C1F473B1600FC0507 /* Launch Screen.storyboard */; };
+		57A87F7F1F47494E00FC0507 /* Information.sks in Resources */ = {isa = PBXBuildFile; fileRef = 57A87F7E1F47494E00FC0507 /* Information.sks */; };
+		57A87F811F4749D400FC0507 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A87F801F4749D400FC0507 /* Information.swift */; };
+		57A87F831F47FAFA00FC0507 /* Shop.sks in Resources */ = {isa = PBXBuildFile; fileRef = 57A87F821F47FAFA00FC0507 /* Shop.sks */; };
+		57AEAE961F45F2000081EB46 /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = 57AEAE941F45F2000081EB46 /* read_me.txt */; };
+		57AEAE9A1F45F5430081EB46 /* FFFFORWA.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 57AEAE991F45F5430081EB46 /* FFFFORWA.TTF */; };
+		57F3ABC71F279B8400DA02E7 /* PlayScreen.sks in Resources */ = {isa = PBXBuildFile; fileRef = 57F3ABC61F279B8400DA02E7 /* PlayScreen.sks */; };
+		57F3ABC91F279D5E00DA02E7 /* MSButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F3ABC81F279D5E00DA02E7 /* MSButtonNode.swift */; };
+		57F3ABCB1F279DCE00DA02E7 /* PlayScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F3ABCA1F279DCE00DA02E7 /* PlayScreen.swift */; };
+		57F3ABCD1F27B6A400DA02E7 /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F3ABCC1F27B6A400DA02E7 /* GameOver.swift */; };
+		57F3ABCF1F27B6EC00DA02E7 /* GameOver.sks in Resources */ = {isa = PBXBuildFile; fileRef = 57F3ABCE1F27B6EC00DA02E7 /* GameOver.sks */; };
+		57FDA0761F4800310026638E /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FDA0751F4800310026638E /* Shop.swift */; };
+		57FDA0781F4B6B290026638E /* TemporaryTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FDA0771F4B6B290026638E /* TemporaryTutorial.swift */; };
+		57FDA07A1F4CA8DF0026638E /* SuperSalty.sks in Resources */ = {isa = PBXBuildFile; fileRef = 57FDA0791F4CA8DF0026638E /* SuperSalty.sks */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		57A0619C1F262D7A004F8003 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57A061791F262D79004F8003 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57A061801F262D79004F8003;
+			remoteInfo = "French Fry";
+		};
+		57A061A71F262D7A004F8003 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57A061791F262D79004F8003 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57A061801F262D79004F8003;
+			remoteInfo = "French Fry";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		572B6EDA1F93F4C4005AA131 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		57392F3F1F437F81006C5C2F /* coin3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coin3.mp3; sourceTree = "<group>"; };
+		57392F411F438060006C5C2F /* waterdrop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = waterdrop.mp3; sourceTree = "<group>"; };
+		57392F491F438497006C5C2F /* rub glass 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "rub glass 1.mp3"; sourceTree = "<group>"; };
+		57392F4F1F438C29006C5C2F /* Splat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Splat.mp3; sourceTree = "<group>"; };
+		57392F511F438F5D006C5C2F /* TemporaryTutorial.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TemporaryTutorial.sks; sourceTree = "<group>"; };
+		57392F531F448022006C5C2F /* Light.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Light.sks; sourceTree = "<group>"; };
+		57392F551F45D59B006C5C2F /* AnimationActions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = AnimationActions.sks; sourceTree = "<group>"; };
+		576172951F4DF3FF00B88ED1 /* BossStageOne.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BossStageOne.sks; sourceTree = "<group>"; };
+		576172971F4DF69200B88ED1 /* BossStageOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BossStageOne.swift; sourceTree = "<group>"; };
+		576172991F4E151C00B88ED1 /* Bomb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bomb.swift; sourceTree = "<group>"; };
+		5761729F1F50AF4E00B88ED1 /* SoundTrack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SoundTrack.mp3; sourceTree = "<group>"; };
+		57A061811F262D79004F8003 /* French Fry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "French Fry.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		57A061841F262D79004F8003 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		57A061861F262D79004F8003 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		57A0618A1F262D79004F8003 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		57A0618C1F262D79004F8003 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		57A0618F1F262D79004F8003 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		57A061911F262D79004F8003 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		57A061941F262D79004F8003 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		57A061961F262D79004F8003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57A0619B1F262D7A004F8003 /* French FryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "French FryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		57A0619F1F262D7A004F8003 /* French_FryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = French_FryTests.swift; sourceTree = "<group>"; };
+		57A061A11F262D7A004F8003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57A061A61F262D7A004F8003 /* French FryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "French FryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		57A061AA1F262D7A004F8003 /* French_FryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = French_FryUITests.swift; sourceTree = "<group>"; };
+		57A061AC1F262D7A004F8003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57A87F7C1F473B1600FC0507 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		57A87F7E1F47494E00FC0507 /* Information.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Information.sks; sourceTree = "<group>"; };
+		57A87F801F4749D400FC0507 /* Information.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
+		57A87F821F47FAFA00FC0507 /* Shop.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Shop.sks; sourceTree = "<group>"; };
+		57AEAE941F45F2000081EB46 /* read_me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = read_me.txt; sourceTree = "<group>"; };
+		57AEAE991F45F5430081EB46 /* FFFFORWA.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FFFFORWA.TTF; sourceTree = "<group>"; };
+		57F3ABC61F279B8400DA02E7 /* PlayScreen.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PlayScreen.sks; sourceTree = "<group>"; };
+		57F3ABC81F279D5E00DA02E7 /* MSButtonNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSButtonNode.swift; sourceTree = "<group>"; };
+		57F3ABCA1F279DCE00DA02E7 /* PlayScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayScreen.swift; sourceTree = "<group>"; };
+		57F3ABCC1F27B6A400DA02E7 /* GameOver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
+		57F3ABCE1F27B6EC00DA02E7 /* GameOver.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOver.sks; sourceTree = "<group>"; };
+		57FDA0751F4800310026638E /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		57FDA0771F4B6B290026638E /* TemporaryTutorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemporaryTutorial.swift; sourceTree = "<group>"; };
+		57FDA0791F4CA8DF0026638E /* SuperSalty.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SuperSalty.sks; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		57A0617E1F262D79004F8003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				572B6EDB1F93F4C4005AA131 /* GameKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57A061981F262D7A004F8003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57A061A31F262D7A004F8003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		572B6ED91F93F4C4005AA131 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				572B6EDA1F93F4C4005AA131 /* GameKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		57A061781F262D79004F8003 = {
+			isa = PBXGroup;
+			children = (
+				57392F551F45D59B006C5C2F /* AnimationActions.sks */,
+				57A061831F262D79004F8003 /* French Fry */,
+				57AEAE921F45F2000081EB46 /* fff-forward */,
+				57A0619E1F262D7A004F8003 /* French FryTests */,
+				57A061A91F262D7A004F8003 /* French FryUITests */,
+				57A061821F262D79004F8003 /* Products */,
+				572B6ED91F93F4C4005AA131 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		57A061821F262D79004F8003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				57A061811F262D79004F8003 /* French Fry.app */,
+				57A0619B1F262D7A004F8003 /* French FryTests.xctest */,
+				57A061A61F262D7A004F8003 /* French FryUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		57A061831F262D79004F8003 /* French Fry */ = {
+			isa = PBXGroup;
+			children = (
+				57A061841F262D79004F8003 /* AppDelegate.swift */,
+				576172991F4E151C00B88ED1 /* Bomb.swift */,
+				57392F531F448022006C5C2F /* Light.sks */,
+				57FDA0791F4CA8DF0026638E /* SuperSalty.sks */,
+				57A87F821F47FAFA00FC0507 /* Shop.sks */,
+				57FDA0751F4800310026638E /* Shop.swift */,
+				57A87F7E1F47494E00FC0507 /* Information.sks */,
+				57A87F801F4749D400FC0507 /* Information.swift */,
+				57F3ABC61F279B8400DA02E7 /* PlayScreen.sks */,
+				57F3ABCA1F279DCE00DA02E7 /* PlayScreen.swift */,
+				57F3ABCE1F27B6EC00DA02E7 /* GameOver.sks */,
+				57F3ABCC1F27B6A400DA02E7 /* GameOver.swift */,
+				57A061861F262D79004F8003 /* GameScene.sks */,
+				57A0618A1F262D79004F8003 /* GameScene.swift */,
+				576172951F4DF3FF00B88ED1 /* BossStageOne.sks */,
+				576172971F4DF69200B88ED1 /* BossStageOne.swift */,
+				57392F511F438F5D006C5C2F /* TemporaryTutorial.sks */,
+				57FDA0771F4B6B290026638E /* TemporaryTutorial.swift */,
+				57A0618C1F262D79004F8003 /* GameViewController.swift */,
+				57F3ABC81F279D5E00DA02E7 /* MSButtonNode.swift */,
+				57A87F7C1F473B1600FC0507 /* Launch Screen.storyboard */,
+				57A0618E1F262D79004F8003 /* Main.storyboard */,
+				57A061911F262D79004F8003 /* Assets.xcassets */,
+				57A061931F262D79004F8003 /* LaunchScreen.storyboard */,
+				57A061961F262D79004F8003 /* Info.plist */,
+				57392F3F1F437F81006C5C2F /* coin3.mp3 */,
+				57392F411F438060006C5C2F /* waterdrop.mp3 */,
+				57392F491F438497006C5C2F /* rub glass 1.mp3 */,
+				57392F4F1F438C29006C5C2F /* Splat.mp3 */,
+				5761729F1F50AF4E00B88ED1 /* SoundTrack.mp3 */,
+			);
+			path = "French Fry";
+			sourceTree = "<group>";
+		};
+		57A0619E1F262D7A004F8003 /* French FryTests */ = {
+			isa = PBXGroup;
+			children = (
+				57A0619F1F262D7A004F8003 /* French_FryTests.swift */,
+				57A061A11F262D7A004F8003 /* Info.plist */,
+			);
+			path = "French FryTests";
+			sourceTree = "<group>";
+		};
+		57A061A91F262D7A004F8003 /* French FryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				57A061AA1F262D7A004F8003 /* French_FryUITests.swift */,
+				57A061AC1F262D7A004F8003 /* Info.plist */,
+			);
+			path = "French FryUITests";
+			sourceTree = "<group>";
+		};
+		57AEAE921F45F2000081EB46 /* fff-forward */ = {
+			isa = PBXGroup;
+			children = (
+				57AEAE991F45F5430081EB46 /* FFFFORWA.TTF */,
+				57AEAE941F45F2000081EB46 /* read_me.txt */,
+			);
+			path = "fff-forward";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		57A061801F262D79004F8003 /* French Fry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57A061AF1F262D7A004F8003 /* Build configuration list for PBXNativeTarget "French Fry" */;
+			buildPhases = (
+				57A0617D1F262D79004F8003 /* Sources */,
+				57A0617E1F262D79004F8003 /* Frameworks */,
+				57A0617F1F262D79004F8003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "French Fry";
+			productName = "French Fry";
+			productReference = 57A061811F262D79004F8003 /* French Fry.app */;
+			productType = "com.apple.product-type.application";
+		};
+		57A0619A1F262D7A004F8003 /* French FryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57A061B21F262D7A004F8003 /* Build configuration list for PBXNativeTarget "French FryTests" */;
+			buildPhases = (
+				57A061971F262D7A004F8003 /* Sources */,
+				57A061981F262D7A004F8003 /* Frameworks */,
+				57A061991F262D7A004F8003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57A0619D1F262D7A004F8003 /* PBXTargetDependency */,
+			);
+			name = "French FryTests";
+			productName = "French FryTests";
+			productReference = 57A0619B1F262D7A004F8003 /* French FryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		57A061A51F262D7A004F8003 /* French FryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57A061B51F262D7A004F8003 /* Build configuration list for PBXNativeTarget "French FryUITests" */;
+			buildPhases = (
+				57A061A21F262D7A004F8003 /* Sources */,
+				57A061A31F262D7A004F8003 /* Frameworks */,
+				57A061A41F262D7A004F8003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57A061A81F262D7A004F8003 /* PBXTargetDependency */,
+			);
+			name = "French FryUITests";
+			productName = "French FryUITests";
+			productReference = 57A061A61F262D7A004F8003 /* French FryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		57A061791F262D79004F8003 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Natalia Luzuriaga";
+				TargetAttributes = {
+					57A061801F262D79004F8003 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = XTA42RW9ZH;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
+					};
+					57A0619A1F262D7A004F8003 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 57A061801F262D79004F8003;
+					};
+					57A061A51F262D7A004F8003 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 573555L2N8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 57A061801F262D79004F8003;
+					};
+				};
+			};
+			buildConfigurationList = 57A0617C1F262D79004F8003 /* Build configuration list for PBXProject "French Fry" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 57A061781F262D79004F8003;
+			productRefGroup = 57A061821F262D79004F8003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				57A061801F262D79004F8003 /* French Fry */,
+				57A0619A1F262D7A004F8003 /* French FryTests */,
+				57A061A51F262D7A004F8003 /* French FryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		57A0617F1F262D79004F8003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				576172961F4DF3FF00B88ED1 /* BossStageOne.sks in Resources */,
+				57392F541F448022006C5C2F /* Light.sks in Resources */,
+				576172A01F50AF4E00B88ED1 /* SoundTrack.mp3 in Resources */,
+				57A061901F262D79004F8003 /* Main.storyboard in Resources */,
+				57A87F7F1F47494E00FC0507 /* Information.sks in Resources */,
+				57A87F7D1F473B1600FC0507 /* Launch Screen.storyboard in Resources */,
+				57392F521F438F5D006C5C2F /* TemporaryTutorial.sks in Resources */,
+				57392F421F438060006C5C2F /* waterdrop.mp3 in Resources */,
+				57F3ABCF1F27B6EC00DA02E7 /* GameOver.sks in Resources */,
+				57392F4A1F438497006C5C2F /* rub glass 1.mp3 in Resources */,
+				57AEAE961F45F2000081EB46 /* read_me.txt in Resources */,
+				57A87F831F47FAFA00FC0507 /* Shop.sks in Resources */,
+				57392F501F438C29006C5C2F /* Splat.mp3 in Resources */,
+				57FDA07A1F4CA8DF0026638E /* SuperSalty.sks in Resources */,
+				57A061871F262D79004F8003 /* GameScene.sks in Resources */,
+				57AEAE9A1F45F5430081EB46 /* FFFFORWA.TTF in Resources */,
+				57A061921F262D79004F8003 /* Assets.xcassets in Resources */,
+				57392F401F437F81006C5C2F /* coin3.mp3 in Resources */,
+				57392F561F45D59B006C5C2F /* AnimationActions.sks in Resources */,
+				57F3ABC71F279B8400DA02E7 /* PlayScreen.sks in Resources */,
+				57A061951F262D79004F8003 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57A061991F262D7A004F8003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57A061A41F262D7A004F8003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		57A0617D1F262D79004F8003 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				576172981F4DF69200B88ED1 /* BossStageOne.swift in Sources */,
+				57A0618B1F262D79004F8003 /* GameScene.swift in Sources */,
+				57FDA0781F4B6B290026638E /* TemporaryTutorial.swift in Sources */,
+				57A0618D1F262D79004F8003 /* GameViewController.swift in Sources */,
+				57A87F811F4749D400FC0507 /* Information.swift in Sources */,
+				57A061851F262D79004F8003 /* AppDelegate.swift in Sources */,
+				57F3ABCD1F27B6A400DA02E7 /* GameOver.swift in Sources */,
+				57F3ABC91F279D5E00DA02E7 /* MSButtonNode.swift in Sources */,
+				5761729A1F4E151C00B88ED1 /* Bomb.swift in Sources */,
+				57F3ABCB1F279DCE00DA02E7 /* PlayScreen.swift in Sources */,
+				57FDA0761F4800310026638E /* Shop.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57A061971F262D7A004F8003 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57A061A01F262D7A004F8003 /* French_FryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57A061A21F262D7A004F8003 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57A061AB1F262D7A004F8003 /* French_FryUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		57A0619D1F262D7A004F8003 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57A061801F262D79004F8003 /* French Fry */;
+			targetProxy = 57A0619C1F262D7A004F8003 /* PBXContainerItemProxy */;
+		};
+		57A061A81F262D7A004F8003 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57A061801F262D79004F8003 /* French Fry */;
+			targetProxy = 57A061A71F262D7A004F8003 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		57A0618E1F262D79004F8003 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57A0618F1F262D79004F8003 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		57A061931F262D79004F8003 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57A061941F262D79004F8003 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		57A061AD1F262D7A004F8003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		57A061AE1F262D7A004F8003 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		57A061B01F262D7A004F8003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XTA42RW9ZH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Tapjoy.embeddedframework",
+					"$(PROJECT_DIR)/Libraries/Tapjoy.embeddedframework",
+				);
+				INFOPLIST_FILE = "French Fry/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "luzuriaga.French-Fry";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		57A061B11F262D7A004F8003 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XTA42RW9ZH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Tapjoy.embeddedframework",
+					"$(PROJECT_DIR)/Libraries/Tapjoy.embeddedframework",
+				);
+				INFOPLIST_FILE = "French Fry/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "luzuriaga.French-Fry";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		57A061B31F262D7A004F8003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "French FryTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Make-School.French-FryTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/French Fry.app/French Fry";
+			};
+			name = Debug;
+		};
+		57A061B41F262D7A004F8003 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "French FryTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Make-School.French-FryTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/French Fry.app/French Fry";
+			};
+			name = Release;
+		};
+		57A061B61F262D7A004F8003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 573555L2N8;
+				INFOPLIST_FILE = "French FryUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Make-School.French-FryUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "French Fry";
+			};
+			name = Debug;
+		};
+		57A061B71F262D7A004F8003 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 573555L2N8;
+				INFOPLIST_FILE = "French FryUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Make-School.French-FryUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "French Fry";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		57A0617C1F262D79004F8003 /* Build configuration list for PBXProject "French Fry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57A061AD1F262D7A004F8003 /* Debug */,
+				57A061AE1F262D7A004F8003 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57A061AF1F262D7A004F8003 /* Build configuration list for PBXNativeTarget "French Fry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57A061B01F262D7A004F8003 /* Debug */,
+				57A061B11F262D7A004F8003 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57A061B21F262D7A004F8003 /* Build configuration list for PBXNativeTarget "French FryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57A061B31F262D7A004F8003 /* Debug */,
+				57A061B41F262D7A004F8003 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57A061B51F262D7A004F8003 /* Build configuration list for PBXNativeTarget "French FryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57A061B61F262D7A004F8003 /* Debug */,
+				57A061B71F262D7A004F8003 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 57A061791F262D79004F8003 /* Project object */;
+}
