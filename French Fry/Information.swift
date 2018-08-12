@@ -12,21 +12,20 @@ import SpriteKit
 class Information: SKScene {
     //UI Connections
     var backButton: MSButtonNode!
-    var button: MSButtonNode!
+    var bossStageButton: MSButtonNode!
     
     override func didMove(to view: SKView) {
         //Setup scene
         
         //Set UI connections
         backButton = self.childNode(withName: "backButton") as! MSButtonNode
-        button = self.childNode(withName: "button") as! MSButtonNode
+        bossStageButton = self.childNode(withName: "bossStageButton") as! MSButtonNode
         
         backButton.selectedHandler = { [unowned self] in
             self.loadPlayScreen()
         }
-        
-        button.selectedHandler = { [unowned self] in
-            self.load()
+        bossStageButton.selectedHandler = { [unowned self] in
+            self.loadBossStage()
         }
         
     }
@@ -51,7 +50,7 @@ class Information: SKScene {
         skView.presentScene(scene)
     }
     
-    func load() {
+    func loadBossStage() {
         /* 1) Grab reference to our SpriteKit view */
         guard let skView = self.view as SKView! else {
             print("Could not get Skview")

@@ -46,7 +46,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var countStool = 0
     var countBottles = 0
     var max = 0
-    var pattern = 1
+    var pattern = 3
     var sets = 0
     
     var jump = false

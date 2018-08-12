@@ -13,6 +13,8 @@ import GameplayKit
 
 class GameViewController: UIViewController, GKGameCenterControllerDelegate {
     
+    var score = Int()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +34,7 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
             view.showsFPS = false
             view.showsNodeCount = false
             
-            authPlayer()
+            authPlayer() //will call once view loads
         }
     }
 
@@ -57,34 +59,12 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
         return true
     }
     
-    @IBAction func CallGC(sender: AnyObject){
-        saveHighscore(number: highScore)
-    }
-    
-    func saveHighscore(number: Int){
-        if GKLocalPlayer.localPlayer().isAuthenticated {
-            let scoreReporter = GKScore(leaderboardIdentifier: "fryFight.leaderboard")
-            
-            scoreReporter.value = Int64(number)
-            
-            let scoreArray : [GKScore] = [scoreReporter]
-            GKScore.report(scoreArray,withCompletionHandler: nil)
-        }
-    }
-    
-    func showLeaderBoard() {
-        let viewController = self.view.window?.rootViewController
-        let gcvc = GKGameCenterViewController()
-        
-        gcvc.gameCenterDelegate = self
-        viewController?.present(gcvc, animated: true, completion: nil)
-    }
-    
     func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
         gameCenterViewController.dismiss(animated: true, completion: nil)
     }
     
     func authPlayer() {
+        //authenticate player
         let localPlayer = GKLocalPlayer.localPlayer()
         localPlayer.authenticateHandler = {
             (view,error) in

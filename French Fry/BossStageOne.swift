@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 import SpriteKit
 import GameplayKit
 
@@ -21,6 +20,9 @@ class BossStageOne: SKScene, SKPhysicsContactDelegate {
     var garlicBomb: SKSpriteNode!
     var bossHealthRed: SKSpriteNode!
     
+    var arrowLeft: SKSpriteNode!
+    var arrowRight: SKSpriteNode!
+    
     var bombLayer: SKNode!
     var bossLabel: SKLabelNode!
     
@@ -32,6 +34,8 @@ class BossStageOne: SKScene, SKPhysicsContactDelegate {
     var hitGround = false
     var touchObject = false
     var pauseNow = false
+    var leftTap = false
+    var rightTap = false
     
     //TIMERS
     var labelTimer :CFTimeInterval = 0
@@ -57,6 +61,9 @@ class BossStageOne: SKScene, SKPhysicsContactDelegate {
         ground = self.childNode(withName: "ground") as! SKSpriteNode
         garlicBomb = self.childNode(withName: "garlicBomb") as! SKSpriteNode
         bossHealthRed = self.childNode(withName: "bossHealthRed") as! SKSpriteNode
+        arrowLeft = self.childNode(withName: "arrowLeft") as! SKSpriteNode
+        arrowRight = self.childNode(withName: "arrowRight") as! SKSpriteNode
+        
         bossLabel = self.childNode(withName: "bossLabel") as! SKLabelNode
         pauseButton = self.childNode(withName: "pauseButton") as! MSButtonNode
         continueButton = self.childNode(withName: "continueButton") as! MSButtonNode
@@ -85,7 +92,7 @@ class BossStageOne: SKScene, SKPhysicsContactDelegate {
         let contactA:SKPhysicsBody = contact.bodyA
         let contactB:SKPhysicsBody = contact.bodyB
         
-        //french fry obtains bomb
+        //french fry(1) obtains bomb(32)
         if contactA.categoryBitMask == 32 || contactB.categoryBitMask == 32{
             if contactA.categoryBitMask ==  1{
                 remove(node: contactB.node!)
@@ -98,7 +105,7 @@ class BossStageOne: SKScene, SKPhysicsContactDelegate {
         }
         
         
-        //fork and ground
+        //fork (2) and ground (4)
         if contactA.categoryBitMask == 4 || contactB.categoryBitMask == 4{
             if contactA.categoryBitMask == 2 {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
@@ -112,7 +119,7 @@ class BossStageOne: SKScene, SKPhysicsContactDelegate {
             }
         }
         
-        // fork and out of bounds
+        // fork(4) and out of bounds/hit block (8)
         if contactA.categoryBitMask == 8 || contactB.categoryBitMask == 8{
             if contactA.categoryBitMask == 4 {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -132,7 +139,7 @@ class BossStageOne: SKScene, SKPhysicsContactDelegate {
             }
         }
         
-        //fork and french fry
+        //fork(4) and french fry(1)
         if contactA.categoryBitMask == 4 || contactB.categoryBitMask == 4{
             if contactA.categoryBitMask == 1{
                 gameOver()
@@ -142,7 +149,7 @@ class BossStageOne: SKScene, SKPhysicsContactDelegate {
             }
         }
         
-        //bomb and fork
+        //bomb_moving(16) and fork(4)
         if contactA.categoryBitMask == 16 || contactB.categoryBitMask == 16{
             if contactA.categoryBitMask == 4 {
                 remove(node: contactB.node!)
@@ -167,6 +174,8 @@ class BossStageOne: SKScene, SKPhysicsContactDelegate {
         
         /* IF TOUCH IN RIGHT SIDE, FRENCH FRY MOVES RIGHT */
         if location.x > size.width / 2 && touchObject == false {
+            rightTap = true
+            remove(node: arrowRight)
             frenchFry.position.x += 10
             frenchFry.xScale = 3
             if frenchFry.position.x >= 557.5 {frenchFry.position.x = 557.5}
@@ -174,6 +183,8 @@ class BossStageOne: SKScene, SKPhysicsContactDelegate {
         
         /* IF TOUCH IN LEFT SIDE, FRENCH FRY MOVES LEFT */
         if location.x < size.width / 2 && touchObject == false {
+            leftTap = true
+            remove(node: arrowLeft)
             frenchFry.position.x -= 10
             frenchFry.xScale = -3
             if frenchFry.position.x <= 10.5 {frenchFry.position.x = 10.5}
@@ -199,6 +210,7 @@ class BossStageOne: SKScene, SKPhysicsContactDelegate {
     }
 
     override func update(_ currentTime: TimeInterval) {
+        if (leftTap == true && rightTap == true) {
         //Updates
         bombGeneration+=fixedDelta
         labelTimer+=fixedDelta
@@ -225,6 +237,7 @@ class BossStageOne: SKScene, SKPhysicsContactDelegate {
         }
         
     }
+    }
     
     func updateGarlicBomb() {
         //EVERY 5 SECONDS, NEW BOMB
@@ -247,7 +260,6 @@ class BossStageOne: SKScene, SKPhysicsContactDelegate {
         if bombs > 0 {
             let bomb = Bomb()
             addChild(bomb)
-            
             //position of shot
             bomb.position.x += frenchFry.position.x + 30
             bomb.position.y += frenchFry.position.y + 10
@@ -255,11 +267,7 @@ class BossStageOne: SKScene, SKPhysicsContactDelegate {
             bomb.physicsBody?.applyForce(CGVector(dx: 40, dy: 0))
             
             self.frenchFry.xScale = 3
-            SKAction.wait(forDuration: 5)
             bombs -= 1
-            if bomb.position.x > 320 {
-                remove(node: bomb)
-            }
         }
     }
     
@@ -273,11 +281,7 @@ class BossStageOne: SKScene, SKPhysicsContactDelegate {
             bomb.zPosition = -1
             bomb.physicsBody?.applyForce(CGVector(dx: -40, dy: 0))
             self.frenchFry.xScale = -3
-            SKAction.wait(forDuration: 5)
             bombs -= 1
-            if bomb.position.x < 0 {
-                remove(node: bomb)
-            }
         }
     }
     
@@ -312,7 +316,6 @@ class BossStageOne: SKScene, SKPhysicsContactDelegate {
         
         /* Restart GameScene */
         skView?.presentScene(scene, transition: transition)
-    
     }
     func gameOver() {
         //adds bonus and score from runner

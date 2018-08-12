@@ -1,13 +1,16 @@
 import Foundation
 import SpriteKit
+import GameKit
 
-class GameOver: SKScene {
+class GameOver: SKScene, GKGameCenterControllerDelegate{
     //UI Connections
     var playButton: MSButtonNode!
     var homeButton: MSButtonNode!
+    var gameCenterButton: MSButtonNode!
     var finalScoreLabel: SKLabelNode!
     var highScoreLabel: SKLabelNode!
     var saltTotalLabel: SKLabelNode!
+    
     
     override func didMove(to view: SKView) {
         //Setup scene
@@ -23,6 +26,7 @@ class GameOver: SKScene {
         //Set UI connections
         playButton = self.childNode(withName: "playButton") as! MSButtonNode
         homeButton = self.childNode(withName: "homeButton") as! MSButtonNode
+        gameCenterButton = self.childNode(withName: "gameCenterButton") as! MSButtonNode
         
         
         playButton.selectedHandler = { [unowned self] in
@@ -31,6 +35,10 @@ class GameOver: SKScene {
         
         homeButton.selectedHandler = { [unowned self] in
             self.loadPlayScreen()
+        }
+        
+        gameCenterButton.selectedHandler = { [unowned self] in
+            self.showLeaderboard()
         }
     }
     
@@ -91,5 +99,28 @@ class GameOver: SKScene {
         /* 4) Start game scene */
         skView.presentScene(scene)
     }
-
+    
+    func saveHighscoreGC(number: Int){
+        if GKLocalPlayer.localPlayer().isAuthenticated {
+            let scoreReporter = GKScore(leaderboardIdentifier: "fryFight.leaderboard")
+            
+            scoreReporter.value = Int64(number)
+            
+            let scoreArray : [GKScore] = [scoreReporter]
+            GKScore.report(scoreArray,withCompletionHandler: nil)
+        }
+    }
+    
+    func showLeaderboard() {
+        saveHighscoreGC(number: highScore)
+        let viewController = self.view?.window?.rootViewController
+        let gcvc = GKGameCenterViewController()
+        
+        gcvc.gameCenterDelegate = self
+        viewController?.present(gcvc, animated: true, completion: nil)
+    }
+    
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+        gameCenterViewController.dismiss(animated: true, completion: nil)
+    }
 }
